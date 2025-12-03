@@ -1,0 +1,15 @@
+
+{% extends 'base\principal.html' %}
+{% block content %}
+ <h1>Eliminar tarea</h1>
+<div class="barra-superior">
+
+        <a class="boton-volver" href="{% url 'tareas' %}">&#x1F860;Volver</a>
+</div>
+
+        <form method="POST">
+            {% csrf_token %}
+            <p>Vas a eliminar la tarea "{{ tareas }}"</p>
+            <input class="boton" type="submit" value="Eliminar">
+        </form>
+{% endblock content %}
